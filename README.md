@@ -26,7 +26,7 @@ Output: 22816 192608
 
 Deployment
 
-Project can be run in Visual Studio. Download zip file or clone onto local machine, open in Visual Studio, load the solution file and run.
+Project can be run in Visual Studio. Download zip file or clone onto local machine. Open Visual Studio, load the solution by selecting the .sln solution file from the File->Open menu and then run the application.
 
 Getting Started
 
@@ -34,7 +34,7 @@ First sample input:
 
 Enter 0 292 399 307 in the Barren Land Coordinates text box on the Find Fertile Land page;
 
-Output will to the Fertile Land Area textbox will be:
+Output to the Fertile Land Area textbox will be:
 
 116800  116800 
 
