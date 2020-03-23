@@ -1,0 +1,32 @@
+﻿@model ASPNetframework2.Models.LandInformation
+
+@{
+	ViewBag.Title = "Barren Land Analysis and Fertile Land Results";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<br />
+<div>
+	<h4>Update the Barren Land input string with lower left coordinates (x then y) first and then upper right coordinates (x then y).</h4>
+	<h4>Use a comma to separate multiple barren land plots.</h4>
+	<p><i>Ex. single plot: 0 292 399 307 Multiple plots: 48 192 351 207, 48 392 351 407, 120 52 135 547, 260 52 275 547</i></p>
+</div>
+<form method="post" style="margin: 5% 0 0">
+	<div class="float-right">
+		<p>Barren Land Coordinates</p><input type="text" style="margin: 1px 0 2px; width:1000px"
+			   name="BarrenLand" value="@Model.BarrenLandInputString" label="Barren Land" /><br />
+		<p>Fertile Land Area</p><input type="text" style="margin: 1px 0 2px; width:1000px"
+			   name="FertileLand " value="@Model.FertileLandOutputString" label="Fertile Land" /><br />
+		<br />
+		<input type="submit" value="Save" />
+	</div>
+</form>
+
+<p>
+	@if (ViewBag.Submitted != null && ViewBag.Submitted)
+	{
+		// If the form was submitted
+		@ViewBag.Message
+	}
+</p>
