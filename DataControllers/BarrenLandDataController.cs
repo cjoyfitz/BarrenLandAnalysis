@@ -46,16 +46,13 @@ namespace ASPNetframework2.DataControllers
 					for (int x = 0; x < WIDTH; x++)
 					{
 						GridUnit unit = new GridUnit(x, y);
-						//for each grid unit, if it's present in the BarrenLand list
-						foreach (GridUnit blgc in allBarrenLand)
+						//check if grid unit is present in the BarrenLand list
+						if (allBarrenLand.Exists(xy=> xy.X == x && xy.Y == y))
 						{
 							//mark that grid unit as barren and accounted for
-							if (blgc.X == x && blgc.Y == y)
-							{
-								unit.IsBarren = true;
-								unit.AccountedFor = true;
-								break;
-							}
+							unit.IsBarren = true;
+							unit.AccountedFor = true;
+							break;
 						}
 						grid[x,y] = unit;
 					}
