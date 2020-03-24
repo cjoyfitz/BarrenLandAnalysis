@@ -52,7 +52,6 @@ namespace ASPNetframework2.DataControllers
 							//mark that grid unit as barren and accounted for
 							unit.IsBarren = true;
 							unit.AccountedFor = true;
-							break;
 						}
 						grid[x,y] = unit;
 					}
